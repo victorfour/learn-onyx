@@ -23,6 +23,18 @@
 
       ;; <<< BEGIN FILL ME IN >>>
 
+      {:onyx/name :identity
+       :onyx/type :function
+       :onyx/fn :clojure.core/identity
+       :onyx/group-by-key :user-id
+       :onyx/max-peers 1
+       :onyx/flux-policy :continue
+       :onyx/batch-size batch-size
+       :onyx/batch-timeout batch-timeout
+       :onyx/doc "Groups by :user-id"}
+
+      
+
       ;; <<< END FILL ME IN >>>
 
       {:onyx/name :write-segments
