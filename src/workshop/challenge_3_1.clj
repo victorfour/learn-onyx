@@ -61,7 +61,17 @@
 
 ;; <<< BEGIN FILL ME IN >>>
 
-;; <<< END FILL ME IN >>>
+(defn upper-case
+  "Converts :name to all upper-case letters."
+  [segment]
+  (update-in segment [:name] (memfn toUpperCase)))
+
+(defn interpose-char
+  "Interposes sep between all chars in :name"
+  [sep segment]
+  (update-in segment [:name] #(apply str (interpose sep %))))
+
+;; <<< END FILL ME IN >>
 
 ;;; Lifecycles ;;;
 
