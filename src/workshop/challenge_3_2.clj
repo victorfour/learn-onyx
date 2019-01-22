@@ -41,7 +41,11 @@
 
 ;; <<< BEGIN FILL ME IN >>>
 
-
+(defn split-sentence
+  "Splits :sentence into :word segments"
+  [{:keys [sentence]}]
+  (->> (clojure.string/split sentence #" ")
+      (map (fn [x] {:word x}))))
 
 ;; <<< END FILL ME IN >>>
 
