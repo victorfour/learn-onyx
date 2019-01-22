@@ -22,6 +22,14 @@
        :onyx/doc "Reads segments from a core.async channel"}
 
       ;; <<< BEGIN FILL ME IN PART 1 >>>
+      {:onyx/name :transform-name
+       :onyx/fn :workshop.challenge-3-3/transform-name
+       :onyx/type :function
+       :my/prefix "~"
+       :my/suffix "?"
+       :onyx/batch-size batch-size
+       :onyx/batch-timeout batch-timeout
+       :onyx/params [:my/prefix :my/suffix]}
 
       ;; <<< END FILL ME IN PART 1 >>>
 
@@ -37,6 +45,9 @@
 ;;; Functions ;;;
 
 ;; <<< BEGIN FILL ME IN PART 2 >>>
+(defn transform-name
+  [prefix suffix segment]
+  (update-in segment [:name] #(str prefix % suffix)))
 
 ;; <<< END FILL ME IN  PART 2 >>>
 
