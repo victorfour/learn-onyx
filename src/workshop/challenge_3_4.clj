@@ -24,6 +24,13 @@
 
       ;; <<< BEGIN FILL ME IN PART 1 >>>
 
+      {:onyx/name :capitalize-names
+       :onyx/fn :workshop.challenge-3-4/capitalize-names
+       :onyx/type :function
+       :onyx/batch-fn? true
+       :onyx/batch-size batch-size
+       :onyx/batch-timeout batch-timeout}
+      
       ;; <<< END FILL ME IN PART 1 >>>
 
       {:onyx/name :write-segments
@@ -38,6 +45,10 @@
 ;;; Functions ;;;
 
 ;; <<< BEGIN FILL ME IN PART 2 >>>
+(defn capitalize-names
+  [segments]
+  (map #(update-in % [:name] s/capitalize) segments))
+
 
 ;; <<< END FILL ME IN PART 2 >>>
 
