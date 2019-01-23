@@ -11,7 +11,7 @@
 ;; a keyword (naming a function) or a vector. In the case
 ;; of a vector, the first value of the vector can be one of
 ;; :and, :or, or :not. Subsequent elements can contain
-;; either keywords or vectors - meanining that composite
+;; either keywords or vectors - meaning that composite
 ;; predicates nest arbitrarily. Predicates can also take parameters.
 ;; We leave parameterization out of scope in this training material.
 ;;
